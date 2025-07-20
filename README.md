@@ -1,4 +1,4 @@
-## Movies API
+## Movies API 🎬
 
 A straightforward Node.js and MongoDB-based Movies API designed for basic CRUD operations: create, read, update, and delete movie records.  
 This project is perfect for practicing RESTful API development and working with databases using Mongoose.
