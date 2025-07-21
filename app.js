@@ -9,6 +9,7 @@ const { updateMany } = require("./models/movies.model");
 const updateMovie = require("./controllers/editMovie");
 const editMovie = require("./controllers/editMovie");
 const deleteMovie = require("./controllers/deleteMovie");
+const movieRecommendation = require("./controllers/movieRecommendation");
 const app = express();
 app.use(express.json());
 
@@ -25,6 +26,11 @@ app.get("/api/movies",getAllMovies);
 app.get("/api/movies/:movie_id",getSingleMovie);
 app.patch("/api/movies",editMovie);
 app.delete("/api/movies/:movie_id",deleteMovie);
+
+// Open AI Recommendations
+app.get("/api/movies/openai/getRecommendations",movieRecommendation);
+
+
 
 // Server Listening
 app.listen(8000,()=>{
