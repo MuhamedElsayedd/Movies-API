@@ -18,7 +18,7 @@ mongoose.connect(process.env.mongo_connection,{}).then(()=>{
     console.log("Connection to MongoDB Succesful!")
 }).catch(()=>{
     console.log("Connection to MongoDB Failed!")
-})
+});
 
 // Routes...
 app.post("/api/movies",addMovie);
