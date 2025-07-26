@@ -7,11 +7,10 @@ const addMovie = async (req, res) => {
   // Validatinos..
   // Try and Catch in Validation
   try{
-    if(!movie_name) throw"Movie's Name is Required!";
+    if(!movie_name) throw "Movie's Name is Required!";
     if(!info)throw "Movie's Info is Required!";
     if(!rating)throw "Movie's Rating is Required!";
     if(rating<1||rating>10) throw "Movie Rating is Require between 1-10";
-    
   }
   catch(e){
     res.status(400).json({
